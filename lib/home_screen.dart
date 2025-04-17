@@ -21,14 +21,33 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.1),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton(
                 onPressed: () {},
-                child: Text("Create", style: TextStyle(color: Colors.black)),
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(Colors.blue),
+                  textStyle: WidgetStateProperty.all(
+                    TextStyle(color: Colors.white),
+                  ),
+                  minimumSize: WidgetStateProperty.all(
+                    Size(MediaQuery.of(context).size.width / 2.5, 50),
+                  ),
+                ),
+                child: Text("Create", style: TextStyle(fontSize: 16)),
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Text("Join", style: TextStyle(color: Colors.black)),
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(Colors.blue),
+                  textStyle: WidgetStateProperty.all(
+                    TextStyle(color: Colors.white),
+                  ),
+                  minimumSize: WidgetStateProperty.all(
+                    Size(MediaQuery.of(context).size.width / 2.5, 50),
+                  ),
+                ),
+                child: Text("Join", style: TextStyle(fontSize: 16)),
               ),
             ],
           ),

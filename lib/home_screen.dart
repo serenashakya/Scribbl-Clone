@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scribbl_clone/create_room_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -24,7 +25,13 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton(
-                onPressed: () {},
+                onPressed:
+                    () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const CreateRoomScreen(),
+                      ),
+                    ),
+
                 style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Colors.blue),
                   textStyle: WidgetStateProperty.all(
@@ -34,7 +41,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     Size(MediaQuery.of(context).size.width / 2.5, 50),
                   ),
                 ),
-                child: Text("Create", style: TextStyle(fontSize: 16)),
+                child: Text(
+                  "Create",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                ),
               ),
               ElevatedButton(
                 onPressed: () {},
@@ -47,7 +57,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     Size(MediaQuery.of(context).size.width / 2.5, 50),
                   ),
                 ),
-                child: Text("Join", style: TextStyle(fontSize: 16)),
+                child: Text(
+                  "Join",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                ),
               ),
             ],
           ),
